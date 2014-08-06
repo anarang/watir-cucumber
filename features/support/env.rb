@@ -3,6 +3,9 @@ require 'headless'
 require 'cucumber'
 require 'rspec'
 require File.expand_path('features/lib/search_methods')
+require 'cucumber/formatter/gherkin_formatter_adapter'
+require 'cucumber/formatter/io'
+require 'gherkin/formatter/json_formatter'
 #require 'rspec-expectations'
 
 
