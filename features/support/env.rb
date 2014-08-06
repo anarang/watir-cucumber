@@ -9,10 +9,10 @@ require 'gherkin/formatter/json_formatter'
 #require 'rspec-expectations'
 
 
-# headless = Headless.new
-# headless.start
+headless = Headless.new
+headless.start
 
-browser = Watir::Browser.new :firefox
+# browser = Watir::Browser.new :firefox
 browser = Watir::Browser.new
 
 CONFIG = YAML.load_file(File.join(File.dirname(__FILE__), '..','..','config', 'config.yml'))
@@ -26,5 +26,5 @@ end
 
 at_exit do
   browser.close
-  # headless.destroy
+  headless.destroy
 end
